@@ -38,7 +38,8 @@ body {
 }
 
 .logo img {
-    max-width: 200px;
+    max-width: 100%;
+height: auto;
     padding: 20px;
     margin-right: 0;
     animation: aumentar 1s ease infinite alternate;
@@ -62,16 +63,18 @@ padding: 15px;
     border-radius: 2px;
     font-size: 15px;
     text-align: center;
+    font-weight: bold;
 }
 
 img{
-    width:100%;
+    max-width: 100%; 
+  height: auto;
 }
 
 
 .img-productos{
-    width: 350px;
-    height: 350px;
+    max-width: 100%; 
+    height: auto;
     text-align: center;
   
 }
@@ -102,44 +105,18 @@ img{
 
 }
 
-.lupa-search{
 
-    background-color:rgb(252, 252, 252);
-    color: #222222;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 4px;
-    padding: 2px;
-    display: flex;
-    order: 1;
-    margin-right: 5px;
-    border: none; 
-    outline: none;
-    border-radius: 8px;
 
-    
-   
-    
-}
-.search-bar-input{
-    background-color:rgb(250, 250, 250);
-    color: #222222;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 5px;
-    padding: 5px;
-    width: 116px;
-  
-  
-   
-    
- 
-   
-}
 
+/*
+
+*/
 
 .busqueda{
 display: flex;
 justify-content: space-between;
 align-items: center;
+
 
 
 }
@@ -169,7 +146,8 @@ main{
   border-top-width: 1px;
   border-color: #ebebeb;
   background-color: white;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+  box-shadow: 1px 0px 5px rgba(79, 79, 79, 0.8);
   font-size: 14px;
   padding-left: 5px;
   transition: box-shadow 0.3s;
@@ -181,7 +159,7 @@ main{
 
 
   .productos:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 8px 5px 5px rgba(0, 0, 0, 0.6);
   
   }
 
@@ -191,7 +169,7 @@ main{
 
 h2{
     text-align: center;
-    color: rgb(118, 117, 117);
+    color: rgb(64, 64, 64);
     width: 90vw;
     font-size: 24px;
     padding-left: 3px;
@@ -221,8 +199,9 @@ h2{
     margin-bottom: 1px;
 }
 .nombre-producto{
-    color: rgb(118,117, 117);
+    color: rgb(0, 0, 0);
     padding-left: 5px;
+    font-weight: bold; 
 
 }
 
@@ -239,6 +218,7 @@ h2{
     padding: 20px;
     padding-right: 2px;
     margin-right: 0;
+   
 }
 
 
@@ -431,13 +411,63 @@ cursor: pointer;
     background-color: #0022AA;
 }
 
+
+
+
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+   margin-right: 25px;
+   width: 150px;
+   height: 30px;
+  }
+
+  
+  .input-busqueda {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    width: 120px;
+    height: 30px;
+  }
+  
+  .boton-buscar {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+
+
+
+
+
 @media (min-width: 536px) {
 
 .nav-bar-b{
   padding-right: 25px;
 }
 
+.barra-busqueda{
+    width: 155px;
+    height: 38px;
+    margin-right: 1px;
+}
+.input-busqueda{
+    width: 125px;
+    height: 38px;
+    margin-right: 1px;
+}
 
+.logo{
+    width: 260px;
+}
 
     
 .busqueda{
@@ -446,6 +476,7 @@ cursor: pointer;
         justify-content: space-between;
         align-items: center;
         padding-right: 50px;
+      
         
         
     
@@ -458,9 +489,9 @@ cursor: pointer;
 
 
 .c{
-    font-size: 14px;
-    margin-right: 25px;
-    padding: 0;
+    font-size:clamp(0.2rem, 2vw, 1.1rem);
+
+    margin-right: 40px;
     
 
 }
@@ -472,41 +503,6 @@ cursor: pointer;
     text-align: center;
     
 
-}
-
-.search-bar-input{
-    background-color:rgb(250, 250, 250);
-    color: #222222;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 5px;
-    padding: 3px;
-    width: 125px;
-   margin-right: 0px;
-   max-width: 310px;
-   height: 35px;
-   font-size: 15px;
-   margin-left: 5px;
-  
-   
-    
- 
-   
-}
-.lupa-search{
-
-    background-color:rgb(252, 252, 252);
-    color: #222222;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 4px;
-    padding: 6px;
-    display: flex;
-    order: 1;
-    margin-right: 30px;
-    margin-left: 0;
-
-    
-   
-    
 }
 
 .busqueda{
@@ -523,6 +519,10 @@ display: inline-block;
 color: #222222;
 display: flex;
 justify-content:space-between;
+margin-right: 15px;
+
+
+
 }
 
 .main-navbar ul{
@@ -536,7 +536,7 @@ justify-content:space-between;
     
 }
 .main-navbar a{
-    font-size: 13px;
+    font-size:clamp(0.2rem, 2vw, 1.1rem);
     
 }
 
@@ -576,14 +576,8 @@ h2{
     text-align: center;
 } 
 .logo img{
-    max-width: 400px;
-    min-width: 200px;
-    padding: 20px;
-    padding-right: 2px;
-    margin-right: 0;
+    max-width: 100%;
 }
-
-
 
 
 .formulario{
@@ -711,6 +705,46 @@ footer{
 }
   @media (min-width: 1280px) {
 
+.logo{
+   width: 425px;
+}
 
+.busqueda{
+margin-left: 60px;
+}
+
+.nav-bar-a{
+    margin-left: 60px;
+
+}
+
+.nav-bar-b{
+    margin-right: 60px;
+}
+
+
+.main-navbar a{
+    font-size:clamp(0.3rem, 2vw, 1.2rem);
+    
+}
+
+
+.c{
+    margin-right: 110px;
+    font-size:clamp(0.4rem, 3vw, 1.3rem);
+   
+}
+
+.barra-busqueda{
+    width: 205px;
+    height: 40px;
+    margin-right: 1px;
+}
+
+.input-busqueda{
+    width: 175px;
+    height: 40px;
+    margin-right: 1px;
+}
 
   }
